@@ -1,8 +1,8 @@
 class BinaryConverter:
 
-    def writeBinaryFile(self,fileName,contenu):
+    def writeBinaryFile(self,fileName,content):
         with open(fileName, "wb") as f:
-            for octet in contenu:
+            for octet in content:
                 f.write((int(octet, base=2)).to_bytes((len(octet)//8), byteorder='big')) 
         f.close()
     
